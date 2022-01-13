@@ -34,3 +34,12 @@ Array.prototype.myIndexOf = function (item) {
 console.log(arr.myIndexOf(1)); //0
 console.log(arr.myIndexOf(45)); //-1
 
+// Custom push for pushing an element in array
+Array.prototype.myPush = function (...item) {
+  for (let i of item) {
+    this[this.length] = i;
+  }
+};
+arr.myPush(45);
+console.log(arr); //[ 1 , 2 , 3 , 4 , 45 ]
+
