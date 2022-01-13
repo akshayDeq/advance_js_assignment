@@ -61,3 +61,23 @@ arr.myForeach((value, index, array) => console.log(value, index, array));
 45 5 [ 1, 2, 3, 4, 5, 45 ] 
 */
 
+/* Custom pop , remove last element from array
+and return the popped value */
+Array.prototype.myPop = function () {
+  const length = this.myLength();
+
+  if (length === 0) {
+    return;
+  }
+
+  const poppedItem = this[length - 1];
+
+  //   decrease the array length by 1
+  this.length = this.length - 1;
+  //   return the popped item
+  return poppedItem;
+};
+
+console.log(arr.myPop()); //45
+console.log(arr); //[ 1, 2, 3, 4, 5 ]
+
