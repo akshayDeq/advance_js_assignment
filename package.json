@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/akshayDeq/advance_js_assignment/issues"
   },
-  "homepage": "https://github.com/akshayDeq/advance_js_assignment#readme"
+  "homepage": "https://github.com/akshayDeq/advance_js_assignment#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
