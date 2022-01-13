@@ -28,3 +28,7 @@ function calculator() {
     },
   };
 }
+let cal = new calculator();
+cal.read();
+cal.sum();
+cal.mul();
