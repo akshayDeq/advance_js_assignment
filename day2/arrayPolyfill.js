@@ -14,3 +14,23 @@ Array.prototype.myLength = function () {
 // test the polyfill for length of array
 console.log(arr.myLength()); // 5
 
+/* indexOf any element in the array
+will return -1 if does not exist or array is empty */
+Array.prototype.myIndexOf = function (item) {
+  const length = this.myLength();
+
+  if (length == 0) {
+    return -1;
+  }
+
+  for (let i = 0; i < length; i++) {
+    if (this[i] === item) {
+      return i;
+    }
+  }
+
+  return -1;
+};
+console.log(arr.myIndexOf(1)); //0
+console.log(arr.myIndexOf(45)); //-1
+
