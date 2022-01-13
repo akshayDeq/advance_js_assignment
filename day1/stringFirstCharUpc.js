@@ -6,3 +6,6 @@ function firstCharToUppCase(str) {
   }
   console.log(str);
 }
+
+let str = "some Char";
+firstCharToUppCase(str);
