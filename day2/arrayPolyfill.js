@@ -43,3 +43,21 @@ Array.prototype.myPush = function (...item) {
 arr.myPush(45);
 console.log(arr); //[ 1 , 2 , 3 , 4 , 45 ]
 
+/* Custom Foreach loop
+here cb is the callback function */
+Array.prototype.myForeach = function (cb) {
+  for (let i = 0; i < this.myLength(); i++) {
+    cb(this[i], i, this);
+  }
+};
+
+arr.myForeach((value, index, array) => console.log(value, index, array));
+/*
+1 0 [ 1, 2, 3, 4, 5, 45 ]
+2 1 [ 1, 2, 3, 4, 5, 45 ]
+3 2 [ 1, 2, 3, 4, 5, 45 ]
+4 3 [ 1, 2, 3, 4, 5, 45 ]
+5 4 [ 1, 2, 3, 4, 5, 45 ]
+45 5 [ 1, 2, 3, 4, 5, 45 ] 
+*/
+
