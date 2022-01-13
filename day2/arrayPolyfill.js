@@ -81,3 +81,26 @@ Array.prototype.myPop = function () {
 console.log(arr.myPop()); //45
 console.log(arr); //[ 1, 2, 3, 4, 5 ]
 
+/* custom shift , removes the value from 0th index 
+in an array */
+Array.prototype.myShift = function (item) {
+  const length = this.myLength();
+
+  if (length === 0) {
+    return;
+  }
+
+  const poppedItem = this[0];
+
+  for (let i = 1; i < length; i++) {
+    this[i - 1] = this[i];
+  }
+  // decrease the array length by 1
+  this.length = this.length - 1;
+  //   return the popped item
+  return poppedItem;
+};
+
+console.log(arr.myShift()); // 1
+console.log(arr.myShift()); // 2
+console.log(arr); // [  3, 4, 5 ]
