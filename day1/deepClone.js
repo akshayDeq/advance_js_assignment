@@ -8,3 +8,8 @@ const obj = {
     return this.name.first + " " + this.name.last;
   },
 };
+
+const deepClone = _.cloneDeep(obj);
+deepClone.name.first = "shubham";
+console.log(obj);
+console.log(deepClone);
