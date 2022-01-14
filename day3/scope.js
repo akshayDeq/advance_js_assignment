@@ -30,3 +30,16 @@ for (let i = 0; i < 10; i++) {
   }, 10);
 }
 
+/*
+Another solution for this problem can be forming a closure
+we wrap our logic inside another function called newInstance,
+everytime newInstance is called with updated value of i 
+*/
+for (var i = 0; i < 10; i++) {
+  function newInstance(m) {
+    setTimeout(function () {
+      console.log(m);
+    }, 10);
+  }
+  newInstance(i);
+}
