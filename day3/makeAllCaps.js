@@ -36,3 +36,17 @@ function sortWords(wordsArray) {
   });
 }
 
+let wordsArray = ["akshay", "prithvi", "mohan", "dennis", "zed"];
+
+// call the makeAllCaps function on wordsArray
+makeAllCaps(wordsArray)
+  .then((capitalWordsArray) => {
+    /* an array with capital words is returned here
+    pass it to the sortWords function */
+    sortWords(capitalWordsArray).then((capitalWordsArraySorted) => {
+      console.log(capitalWordsArraySorted); // a sorted array with capitalized words gets printed
+    });
+  })
+  .catch((error) => {
+    throw new Error(error);
+  });
