@@ -10,3 +10,12 @@ function waitForRandomTime(numberToPrint) {
   });
 }
 
+// Using async/await we can make the asynchronous code behave synchronously
+async function printValue() {
+  for (let i = 0; i <= 10; i++) {
+    let numberToPrint = await waitForRandomTime(i);
+    console.log(numberToPrint);
+  }
+}
+
+printValue();
