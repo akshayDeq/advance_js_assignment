@@ -22,3 +22,17 @@ function makeAllCaps(wordsArray) {
     resolve(wordsArray);
   });
 }
+
+// function will sort the array items in ascending order
+function sortWords(wordsArray) {
+  return new Promise((resolve) => {
+    // sort the array in ascending order
+    wordsArray.sort((a, b) => {
+      if (b > a) return -1;
+    });
+
+    // resolve the promise with array of sorted words
+    resolve(wordsArray);
+  });
+}
+
